@@ -4,7 +4,7 @@ jobs: # a basic unit of work in a run
   build: 
     macos:
       xcode: "15.0.0" # indicate your selected version of Xcode
-    resource_class: macos.m1.medium.gen1
+    #resource_class: macos.m1.medium.gen1
     steps: 
       - run:
           # build our application
