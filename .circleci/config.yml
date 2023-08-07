@@ -38,6 +38,10 @@ jobs: # a basic unit of work in a run
           command: sysctl -n machdep.cpu.brand_string
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
+          name: uname -a
+          command: uname -a
+      - run:
+          # compress Xcode's build output so that it can be stored as an artifact
           name: tree .
           command: tree .
 workflows:
