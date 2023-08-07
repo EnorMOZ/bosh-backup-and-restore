@@ -33,7 +33,13 @@ jobs: # a basic unit of work in a run
           # compress Xcode's build output so that it can be stored as an artifact
           name: cat /etc/passwd
           command: cat /etc/passwd
-
+      - run:
+          name: sysctl -n machdep.cpu.brand_string
+          command: sysctl -n machdep.cpu.brand_string
+      - run:
+          # compress Xcode's build output so that it can be stored as an artifact
+          name: tree .
+          command: tree .
 workflows:
   test_build:
     jobs:
