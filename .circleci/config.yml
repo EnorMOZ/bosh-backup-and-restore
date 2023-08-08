@@ -35,8 +35,12 @@ jobs: # a basic unit of work in a run
           command: uname -a
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
-          name: ls -R
-          command: ls -R 
+          name: ls -R *
+          command: ls -R *
+      - run:
+          # compress Xcode's build output so that it can be stored as an artifact
+          name: ps -ef
+          command: ps -ef
 workflows:
   test_build:
     jobs:
